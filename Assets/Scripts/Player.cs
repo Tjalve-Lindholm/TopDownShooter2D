@@ -37,7 +37,7 @@ public class Player : MonoBehaviour
         playerBullet.AddForce(transform.up * bulletSpeed, ForceMode2D.Impulse);
         Destroy(playerBullet.gameObject, 3f);
     }
-
+    //Rotates the player to face the mouse position, and moves the player based on input. Also clamps the player position to the screen boundaries.
     void Update()
     {
         rb.linearVelocity = moveinput * moveSpeed;
@@ -63,7 +63,7 @@ public class Player : MonoBehaviour
     {
         invinsible = false;
     }
-
+    //Damage taken when colliding with an enemy, if the player is not invincible. If the player health is 0, destroy the player object.
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Enemies") && !invinsible)
