@@ -230,7 +230,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   playerHealth: 4
   invinsibleTime: 3
-  moveSpeed: 6
+  moveSpeed: 4
   rotationSpeed: 700
   bulletSpeed: 10
   bullet: {fileID: 0}
